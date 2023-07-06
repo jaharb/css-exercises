@@ -1,0 +1,25 @@
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.base-pink{
+    background-color: pink;
+    font-size: 40px;
+    
+}
+
+.cooler{
+    font-size: 50px;
+}
+
+#green-four {
+   font-weight: bolder;
+   background-color: rgb(129, 230, 129);
+   font-size: 45px;
+}
+
+#blue-two {
+    color: blue;
+    font-size: 65px;
+ }
