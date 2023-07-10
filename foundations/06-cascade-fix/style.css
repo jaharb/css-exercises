@@ -8,13 +8,30 @@ body {
   font-weight: 800;
 }
 
+.para {
+  font-size: 22px;
+}
+
 .small-para {
   font-size: 14px;
   font-weight: 800;
 }
 
+/* Moved the following up, because font-size was overriding small-para font size
+   So an element that had both para and small para gets both sets of properties, so
+   one rule's font size has to win. Since .para was later, it's thing was winning.
+   So the whole issue with overriding is not a simple as the *same* rule being
+   repeated later in the file, it is more likely when the same property gets pulled
+   in from multiple rules, the latest applicable rule wins
 .para {
   font-size: 22px;
+}
+*/
+
+.button {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-size: 20px;
 }
 
 .confirm {
@@ -23,10 +40,32 @@ body {
   font-weight: bold;
 } 
 
+/*
+  Moved this rule above .confirm
+  NOTE: background vs background-color: background is a shorthand keyword that
+  let's you set a lot of properties of background, but if you only set color with
+  it, it's the same
 .button {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   font-size: 20px;
+}
+*/
+
+/* note: even when div.text comes before .child, div.text still wins simply because it
+   is more specific, so cascade doesn't override that. I initially tried to fix this with
+   rearranging, didn't work */
+
+/* div.text {
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+  font-weight: 100;
+} */
+
+.text {
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+  font-weight: 100;
 }
 
 .child {
@@ -35,8 +74,4 @@ body {
   font-size: 14px;
 }
 
-div.text {
-  color: rgb(0, 0, 0);
-  font-size: 22px;
-  font-weight: 100;
-}
+
