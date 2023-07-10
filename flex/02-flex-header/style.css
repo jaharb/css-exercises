@@ -4,7 +4,7 @@
   display: flex;            /* flex only applies to one level of children, not recursive */
   justify-content: space-between; 
   align-items:center;
-  padding: 10px;
+  padding: 10px;            /* this was stupid to not think of this; didn't notice the background above/below logo
  
 }
 
