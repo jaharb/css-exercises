@@ -10,6 +10,28 @@ img {
 .title {
   font-size: 36px;
   font-weight: 900;
+ /* margin: auto; why didn't margin auto work on the title to simply center it? Because this centers the div itself, not text contained in div */
+ text-align: center;
+ margin-bottom: 32px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 52px;
+}
+
+.plant-item {
+ /* display: flex;  
+  flex-direction: column; DIDN'T NEED THIS, the image and div were going to stack anyway */
+ /* justify-content: center; note: this centers the div, but not the text in the div, that's why we need text-align */
+  /*align-items: center; */
+
+  max-width: 200px;
+}
+
+.text {
+  text-align: center;
 }
 
 /* do not edit this footer */
@@ -23,4 +45,24 @@ img {
   align-items: center;
   justify-content: center;
   background: #eee;
+}
+
+/* SOLUTION */
+
+body {
+  text-align: center;  /* this was a gimpy thing to do; it takes advantage of the trick that text_align on parent div of an image, centers the image!
+}
+
+.title {
+  margin-bottom: 32px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 52px;
+}
+
+.info {
+  max-width: 200px;
 }
